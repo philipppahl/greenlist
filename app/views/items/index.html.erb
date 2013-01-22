@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<h1>House Inventory</h1>
+
+<%= link_to 'Add Item', new_item_path %>
+<br />
+
+<table class="items">
+
+<% @items.each do |item| %>
+  <tr>
+    <td class='item_name <%= item.status %>'><%= item.name %></td>
+   
+    <td>
+      <%= form_for(item) do |f| %>
+        <%= f.hidden_field :name %>
+        <%= render 'select_status', f: f %>
+        <%= f.submit "Update"%>
+      <% end %>
+    </td>
+    <td><%= link_to "Modify", edit_item_path(item) %></td>
+    <td><%= link_to 'Remove', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+
+</table>

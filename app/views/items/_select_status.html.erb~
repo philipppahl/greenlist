@@ -1,0 +1,3 @@
+<%= f.select :status, [['Green', 'green'], 
+                       ['Yellow', 'yellow'], 
+                       ['Red', 'red']] %>

@@ -1,0 +1,29 @@
+// Place all the styles related to the Items controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.item_name {
+  font-weight: bold;
+  font-size: 150%;
+  width: 10em;
+  border-top: 1px solid DarkSlateGrey
+}
+
+.green {
+  color: ForestGreen
+}
+
+.yellow {
+  color: GoldenRod
+}
+
+.red {
+  color: Red
+}
+
+table#items td {
+  text-align: right;
+  margin: 0;
+  padding: 0;
+  display: inline
+}
